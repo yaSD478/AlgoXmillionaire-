@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://algoxmillionaire.vercel.app/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!--
+    ⚠️ Only the homepage is listed above on purpose.
+
+    This app is a single-page app that routes with query strings
+    (?page=..., ?product=...) rather than real paths like
+    /algo-trading-bots/ or /forex-eas/. A sitemap entry only helps
+    Google if the URL actually renders that content when crawled
+    directly and is the canonical URL for it — right now none of the
+    other pages/products have a dedicated path, so listing fake
+    /algo-trading-bots/ style URLs here would be misleading and could
+    hurt indexing rather than help it.
+
+    To properly list products and categories here, you'd need one of:
+      1) Real path-based routes (e.g. Vercel rewrites mapping
+         /algo-trading-bots/ and /product/<id> to index.html, plus JS
+         that reads the path instead of only the query string), or
+      2) A small server/edge function that generates sitemap.xml from
+         your Firebase product data on a schedule.
+    Both are bigger changes than a safe drop-in fix, so they're left
+    as a recommended next step rather than done automatically here.
+  -->
+</urlset>

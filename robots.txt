@@ -1,18 +1,22 @@
+# AlgoXmillionaire — robots.txt
+
 User-agent: *
 Allow: /
 
-# Private / account / transactional pages — not useful to searchers
+# Private / account / utility pages (this is a single-page app using ?page=xxx routing —
+# these match the same keys as NOINDEX_PAGES in index.html)
 Disallow: /?page=cart
 Disallow: /?page=checkout
-Disallow: /?page=wishlist
 Disallow: /?page=profile
 Disallow: /?page=orders
-Disallow: /?page=chat
+Disallow: /?page=wishlist
 Disallow: /?page=membership
-
-# Legacy course-library pages — kept functional for existing customers,
-# just not promoted in search (see NOINDEX_PAGES / setRobotsMeta in index.html)
+Disallow: /?page=chat
 Disallow: /?page=courses
 Disallow: /?page=mcourses
+
+# Admin panel — keep bots out entirely
+Disallow: /admin.html
+Disallow: /admin
 
 Sitemap: https://algoxmillionaire.vercel.app/sitemap.xml

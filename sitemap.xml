@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!--
+  AlgoXmillionaire — sitemap.xml
 
+  NOTE: Your product pages (?product=ID) are loaded dynamically from Firebase,
+  so a plain static file like this one can't list them — there's no server
+  running here to query the database and generate URLs on the fly. To get
+  products into Google's sitemap you'd need one of:
+    - a small serverless function/GitHub Action that reads Firebase and
+      regenerates this file on a schedule, or
+    - a server-rendered/pre-rendered product route.
+  Until then, Google can still discover and index individual products by
+  crawling the links on your homepage (each has its own canonical URL and
+  Product JSON-LD via updateProductSEO() in index.html) — this file just
+  can't pre-list them for you.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://algoxmillionaire.vercel.app/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://algoxmillionaire.vercel.app/?page=proof</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
-
 </urlset>

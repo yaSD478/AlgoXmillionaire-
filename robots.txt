@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Private / account / transactional pages — not useful to searchers
+Disallow: /?page=cart
+Disallow: /?page=checkout
+Disallow: /?page=wishlist
+Disallow: /?page=profile
+Disallow: /?page=orders
+Disallow: /?page=chat
+Disallow: /?page=membership
+
+# Legacy course-library pages — kept functional for existing customers,
+# just not promoted in search (see NOINDEX_PAGES / setRobotsMeta in index.html)
+Disallow: /?page=courses
+Disallow: /?page=mcourses
+
+Sitemap: https://algoxmillionaire.vercel.app/sitemap.xml
